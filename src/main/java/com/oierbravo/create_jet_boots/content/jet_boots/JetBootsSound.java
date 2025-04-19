@@ -39,7 +39,7 @@ public class JetBootsSound extends AbstractTickableSoundInstance {
         this.y = (float) pos.y() - 10;
         this.z = (float) pos.z();
 
-        if (!FlightManager.isFlying(this.player)) {
+        if (!FlightManager.isFlying(this.player) || JetBootsItem.getWornItem(this.player).isEmpty()) {
             synchronized (PLAYING_FOR) {
                 PLAYING_FOR.remove(this.player.getId());
                 if(!this.isStopped())

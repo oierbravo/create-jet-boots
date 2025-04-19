@@ -42,6 +42,7 @@ public class CreateJetBoots
         ModItemTags.init();
         ModItems.register();
         ModArmorMaterials.register(modEventBus);
+        ModItemComponents.register(modEventBus);
 
         MConfigs.register(modLoadingContext,modContainer);
 

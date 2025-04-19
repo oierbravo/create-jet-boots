@@ -67,7 +67,7 @@ public class ClientEvents {
         if (isPreEvent) {
             return;
         }
-        if(!JetBootsItem.getWornItem(mc.player).isEmpty())
+        if(JetBootsItem.getWornItem(mc.player).isEmpty())
             return;
 
 

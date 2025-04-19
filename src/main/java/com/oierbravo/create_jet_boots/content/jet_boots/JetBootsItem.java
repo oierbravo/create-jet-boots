@@ -28,11 +28,6 @@ public class JetBootsItem extends BaseArmorItem {
 	public static final EquipmentSlot SLOT = EquipmentSlot.FEET;
 	public static final ArmorItem.Type TYPE = ArmorItem.Type.BOOTS;
 
-	private static double HORIZONTAL_FACTOR = 0.5;
-	private static  double VERTICAL_FACTOR = 0.3;
-
-	public static int TICKS_TO_DRAIN = 20;
-	public static int DRAIN_AMOUNT = 1;
 
 	private int ticks;
 
@@ -68,13 +63,9 @@ public class JetBootsItem extends BaseArmorItem {
 			if(FlightManager.weOwnFlight(player) && !player.onGround() && !player.jumping) {
 
 				List<ItemStack> backtanks = BacktankUtil.getAllWithAir(player);
-				/*if (backtanks.isEmpty()){
-					FlightManager.disableFlight(player);
-					return;
-				}*/
 
  				ticks++;
-				if(ticks >= TICKS_TO_DRAIN){
+				if(ticks >= MConfigs.server().numTicks.get()){
 					BacktankUtil.consumeAir(player, backtanks.getFirst(), MConfigs.server().airAmount.get());
 					ticks = 0;
 				}
@@ -97,10 +88,12 @@ public class JetBootsItem extends BaseArmorItem {
 					FlightManager.disableFlight(serverPlayer);
 
 			if(world.isClientSide) {
-				Vec3 motion = player.getDeltaMovement();
+				if(!MConfigs.server().creativeFlight.get()){
+					Vec3 motion = player.getDeltaMovement();
 
-				if(!player.jumping && player.getAbilities().flying)
-					player.setDeltaMovement(motion.multiply(HORIZONTAL_FACTOR,VERTICAL_FACTOR, HORIZONTAL_FACTOR));
+					if(!player.jumping && player.getAbilities().flying)
+						player.setDeltaMovement(motion.multiply(MConfigs.server().restrictedHorizontalFactor.getF(),MConfigs.server().restrictedVerticalFactor.getF(), MConfigs.server().restrictedHorizontalFactor.getF()));
+				}
 			}
 
 

@@ -156,7 +156,7 @@ repositories {
 dependencies {
     implementation 'org.jetbrains:annotations:22.0.0'
 
-    jarJar(implementation("com.oierbravo.mechanicals:Mechanicals:${mechanicals}"))
+    jarJar(implementation("com.oierbravo.mechanicals:Mechanicals:${minecraft_version}-${mechanicals}"))
 
     implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
     implementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
@@ -224,11 +224,12 @@ publishMods {
             clientRequired = true
             serverRequired = true
             requires("create")
+            requires("flightapi")
             optional("jei")
 
         }
     }
-    var mrToken = System.getenv("MODRINTH_TOKEN")
+    /*var mrToken = System.getenv("MODRINTH_TOKEN")
     if(mrToken != null) {
         modrinth {
             accessToken = providers.environmentVariable("MODRINTH_TOKEN")
@@ -237,5 +238,5 @@ publishMods {
             requires("create")
             optional("jei")
         }
-    }
+    }*/
 }

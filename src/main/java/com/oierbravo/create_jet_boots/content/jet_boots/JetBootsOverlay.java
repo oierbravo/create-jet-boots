@@ -1,6 +1,7 @@
 package com.oierbravo.create_jet_boots.content.jet_boots;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.oierbravo.create_jet_boots.infrastructure.config.MConfigs;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.content.equipment.armor.RemainingAirOverlay;
 import net.createmod.catnip.gui.element.GuiGameElement;
@@ -50,7 +51,7 @@ public class JetBootsOverlay implements LayeredDraw.Layer  {
 
     }
     public int renderTankTimer(int airLeft, GuiGraphics guiGraphics, LocalPlayer player){
-        int timeLeft = airLeft / JetBootsItem.DRAIN_AMOUNT;
+        int timeLeft = airLeft / MConfigs.server().airAmount.get();
         PoseStack poseStack = guiGraphics.pose();
         poseStack.pushPose();
 
@@ -62,7 +63,7 @@ public class JetBootsOverlay implements LayeredDraw.Layer  {
 
         Minecraft mc = Minecraft.getInstance();
 
-        Component text = Component.literal(StringUtil.formatTickDuration(Math.max(0, timeLeft - 1) * JetBootsItem.TICKS_TO_DRAIN, mc.level.tickRateManager().tickrate()));
+        Component text = Component.literal(StringUtil.formatTickDuration(Math.max(0, timeLeft - 1) * MConfigs.server().numTicks.get(), mc.level.tickRateManager().tickrate()));
         GuiGameElement.of(backtank)
                 .at(0, 0)
                 .render(guiGraphics);

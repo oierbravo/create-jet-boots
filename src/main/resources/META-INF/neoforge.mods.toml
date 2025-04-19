@@ -31,3 +31,10 @@ Create addon. Jet boots that allow flight.
     versionRange="[6.0.4,6.1.0)"
     ordering = "AFTER"
     side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+    modId = "flightapi"
+    mandatory = true
+    versionRange="[1.0.4,1.1.0)"
+    ordering = "AFTER"
+    side = "BOTH"

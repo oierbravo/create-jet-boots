@@ -1,0 +1,8 @@
+{
+  "jet_boots": {
+    "subtitle": "create_jet_boots.sounds.jet_boots",
+    "sounds": [
+      "create_jet_boots:jet_boots"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+// 1.21.1	2025-04-19T07:12:45.230130931	Registrate Provider for create_jet_boots [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (enchantments), Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+8716896f293ca98de9839ccffe2983494b0d9df5 assets/create_jet_boots/lang/en_ud.json
+68431939cbf3fa88a9ba0e97c27e39a85403ffa2 assets/create_jet_boots/lang/en_us.json
+430f12aae16a0e7ce6f60a07f2513c87caa142d6 assets/create_jet_boots/models/item/jet_boots.json
+deb194fccc7f7f3e7973f785d2211e2950df8f65 data/create_jet_boots/advancement/recipes/misc/crafting/jet_boots.json
+ef49dbf2d83f52909a7279e09a2cee9b948d531a data/create_jet_boots/recipe/crafting/jet_boots.json
+cfb98cdf5a5b07435ffe9f0dccf39263b52e1029 data/create_jet_boots/tags/item/jet_boots.json
+cfb98cdf5a5b07435ffe9f0dccf39263b52e1029 data/minecraft/tags/item/foot_armor.json

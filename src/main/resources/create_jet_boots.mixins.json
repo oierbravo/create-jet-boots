@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "priority": 1100,
+  "package": "com.oierbravo.create_jet_boots.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "refmap": "create_jet_boots.refmap.json",
+  "mixins": [],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "create:copper_diving_boots"
+    },
+    "C": {
+      "item": "create:cogwheel"
+    },
+    "E": {
+      "item": "create:electron_tube"
+    },
+    "I": {
+      "item": "create:brass_ingot"
+    }
+  },
+  "pattern": [
+    "E E",
+    "CBC",
+    "I I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "create_jet_boots:jet_boots"
+  }
+}

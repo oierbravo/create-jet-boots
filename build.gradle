@@ -224,7 +224,7 @@ publishMods {
             clientRequired = true
             serverRequired = true
             requires("create")
-            requires("flightapi")
+            requires("flight-api")
             optional("jei")
 
         }

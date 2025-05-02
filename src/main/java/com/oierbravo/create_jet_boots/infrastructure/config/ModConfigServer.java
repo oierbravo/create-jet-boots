@@ -5,7 +5,7 @@ import net.createmod.catnip.config.ConfigBase;
 public class ModConfigServer extends ConfigBase {
 
     public final ConfigInt numTicks = i(20, 1, "numTicks", Comments.numTicks);
-    public final ConfigInt airAmount = i(1, 1, "numTicks", Comments.airAmount);
+    public final ConfigInt airAmount = i(1, 1, "airAmount", Comments.airAmount);
 
     public final ConfigBool creativeFlight = b(false, "creativeFlight", Comments.creativeFlight);
 

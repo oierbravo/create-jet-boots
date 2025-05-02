@@ -147,6 +147,10 @@ repositories {
         name = 'BehindTheScenery Team Maven'
         url = 'file:///home/oier/Descargas/flightapi-neoforge-1.0.4.jar'
     }
+    maven {
+        name = "fosil"
+        url = "https://maven.fosil.eu/releases"
+    }
     mavenLocal()
     flatDir {
         dirs 'libs'
@@ -156,7 +160,7 @@ repositories {
 dependencies {
     implementation 'org.jetbrains:annotations:22.0.0'
 
-    jarJar(implementation("com.oierbravo.mechanicals:Mechanicals:${minecraft_version}-${mechanicals}"))
+    implementation("com.oierbravo.mechanicals:Mechanicals:${minecraft_version}-${mechanicals}")
 
     implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
     implementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")

@@ -65,8 +65,8 @@ public class JetBootsItem extends BaseArmorItem {
 				List<ItemStack> backtanks = BacktankUtil.getAllWithAir(player);
 
  				ticks++;
-				if(ticks >= MConfigs.server().numTicks.get()){
-					BacktankUtil.consumeAir(player, backtanks.getFirst(), MConfigs.server().airAmount.get());
+				if(ticks >= MConfigs.server().jetBoots.numTicks.get()){
+					BacktankUtil.consumeAir(player, backtanks.getFirst(), MConfigs.server().jetBoots.airAmount.get());
 					ticks = 0;
 				}
 			}
@@ -88,11 +88,11 @@ public class JetBootsItem extends BaseArmorItem {
 					FlightManager.disableFlight(serverPlayer);
 
 			if(world.isClientSide) {
-				if(!MConfigs.server().creativeFlight.get()){
+				if(!MConfigs.server().jetBoots.creativeFlight.get()){
 					Vec3 motion = player.getDeltaMovement();
 
 					if(!player.jumping && player.getAbilities().flying)
-						player.setDeltaMovement(motion.multiply(MConfigs.server().restrictedHorizontalFactor.getF(),MConfigs.server().restrictedVerticalFactor.getF(), MConfigs.server().restrictedHorizontalFactor.getF()));
+						player.setDeltaMovement(motion.multiply(MConfigs.server().jetBoots.restrictedHorizontalFactor.getF(),MConfigs.server().jetBoots.restrictedVerticalFactor.getF(), MConfigs.server().jetBoots.restrictedHorizontalFactor.getF()));
 				}
 			}
 

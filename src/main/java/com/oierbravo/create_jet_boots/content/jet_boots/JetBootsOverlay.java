@@ -53,7 +53,7 @@ public class JetBootsOverlay implements LayeredDraw.Layer  {
         poseStack.pushPose();
 
         int xPosition = guiGraphics.guiWidth() / 2 - 98;
-        int yPosition = guiGraphics.guiHeight() - 8;
+        int yPosition = guiGraphics.guiHeight() - 24;
         poseStack.translate(xPosition , yPosition , 0);
         poseStack.scale(.1f,.1f,.1f);
         poseStack.mulPose(Axis.ZP.rotationDegrees(180f));

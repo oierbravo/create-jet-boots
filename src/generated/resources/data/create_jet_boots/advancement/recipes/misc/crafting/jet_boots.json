@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_andesite_casing": {
+    "has_air_source": {
       "conditions": {
         "items": [
           {
-            "items": "#create:casing"
+            "items": "#create:pressurized_air_sources"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_andesite_casing"
+      "has_air_source"
     ]
   ],
   "rewards": {

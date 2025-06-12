@@ -9,7 +9,9 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import com.simibubi.create.infrastructure.data.CreateDatagen;
 import net.createmod.catnip.lang.FontHelper;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.ModLoadingContext;
@@ -52,7 +54,7 @@ public class CreateJetBoots
 
         modEventBus.addListener(this::doClientStuff);
 
-        modEventBus.addListener(ModDataGen::gatherData);
+        modEventBus.addListener(EventPriority.HIGHEST, CreateDatagen::gatherDataHighPriority);
 
         generateLangEntries();
     }

@@ -28,7 +28,7 @@ public class ModItems {
                                     .pattern("E E")
                                     .pattern("CBC")
                                     .pattern("I I")
-                                    .unlockedBy("has_diving_armor", RegistrateRecipeProvider.has(AllTags.AllItemTags.DIVING_ARMOR.tag))
+                                    .unlockedBy("has_air_source", RegistrateRecipeProvider.has(AllTags.AllItemTags.PRESSURIZED_AIR_SOURCES.tag))
                                     .save(p, ModConstants.asResource("crafting/" + c.getName())))
                             .tag(ItemTags.FOOT_ARMOR, ModItemTags.JET_BOOTS.tag)
                             .register();

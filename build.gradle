@@ -174,7 +174,9 @@ dependencies {
     implementation("curse.maven:jade-324717:${jade_id}")
     implementation("mezz.jei:jei-${jei_minecraft_version}-neoforge:${jei_version}")
 
-    implementation("dev.denismasterherobrine:flightapi-neoforge:${flightapi_version}")
+    implementation("curse.maven:flight-api-1219748:6891762")
+
+    //implementation("dev.denismasterherobrine:flightapi-neoforge:${flightapi_version}")
 
     if (cc_tweaked_enable.toBoolean()) {
         compileOnly("cc.tweaked:cc-tweaked-${cc_tweaked_minecraft_version}-core-api:${cc_tweaked_version}")

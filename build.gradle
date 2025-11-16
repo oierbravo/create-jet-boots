@@ -184,12 +184,6 @@ dependencies {
         runtimeOnly("cc.tweaked:cc-tweaked-${cc_tweaked_minecraft_version}-forge:${cc_tweaked_version}")
     }
 
-    if (kubejs_enabled.toBoolean()) {
-        compileOnly("dev.architectury:architectury-neoforge:$architectury_version")
-        //api("dev.latvian.mods:kubejs-neoforge:$kubejs_version")
-        //interfaceInjectionData("dev.latvian.mods:kubejs-neoforge:$kubejs_version") // optional
-    }
-
 }
 
 processResources {
